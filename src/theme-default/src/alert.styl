@@ -1,0 +1,52 @@
+@import './common/config'
+.slide-fade-enter-active {
+  transition: all .3s ease-out;
+}
+.slide-fade-leave-active {
+  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to {
+  transform: translateY(-15px);
+  opacity: 0;
+}
+.{NS}-alert{
+    font-size: 14px;
+    position relative;
+    padding: 6px 24px;
+    border-radius: 3px;
+    // box-shadow: 1px 1px rgba(0,0,0,0.4);
+  }
+.{NS}-alert-title{
+    margin-bottom: 5px;
+  }
+  .{NS}-alert-des{
+    font-size: 12px;
+  }
+.{NS}-alert-default{
+    @extend .{NS}-alert;
+    background: #EAF4FE;
+  }
+.{NS}-alert-success{
+    @extend .{NS}-alert;
+    background: #E8F9F0;
+  }
+  .{NS}-alert-warn{
+    @extend .{NS}-alert;
+    background: #FFF5E6;
+  }
+  .{NS}-alert-error{
+    @extend .{NS}-alert;
+    background: #FDECE8;
+  }
+
+  .{NS}-alert-close{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ccc;
+    cursor: default;
+  }
+  .{NS}-alert-close:hover{
+    color:#aaa; 
+  }
