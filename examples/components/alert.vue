@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div >
         <div @click="addAlert">
             add
         </div>
@@ -22,16 +22,31 @@
 export default {
     data(){
         return{
-             alertData:[],
+            timer:'',
+            count:0,
+            alertData:[],
         }
+    },
+    mounted(){
+        this.atuoAdd();
     },
     methods:{
     addAlert(){
+    this.count++;
       let data={
           type:'success',
       }
 
       this.alertData.push(data);
+        if(this.count>40){
+            clearTimeout(this.timer);
+        }else{
+            this.atuoAdd();
+        }
+
+    },
+    atuoAdd(){
+       this.timer = setTimeout(this.addAlert,100);
     }
   }
 }

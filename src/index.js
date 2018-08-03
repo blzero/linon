@@ -1,5 +1,5 @@
 
-import Alert from '@/components/alert'
+import Alert from './components/alert'
 
 const components = [Alert];
 
@@ -9,6 +9,10 @@ const install = function(Vue,opts={}){
   });
 }
 
+// auto install
+if (typeof window !== 'undefined' && window.Vue) {
+  install(window.Vue);
+}
 export default {
   install,
   Alert

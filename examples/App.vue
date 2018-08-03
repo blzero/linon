@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
    
     <router-view/>
 
@@ -19,13 +18,29 @@ export default {
 }
 </script>
 
-<style>
+<style lang='stylus'>
+*{
+  margin: 0;
+  padding: 0;
+  &::-webkit-scrollbar {
+      width: 4px;
+  }
+  &::-webkit-scrollbar-track {
+      background-color: #eee;
+  }
+  &::-webkit-scrollbar-thumb {
+      border-radius 2px;
+      background: #ccc;
+  }
+}
+html,body{
+  height: 100%;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* text-align: center; */
   color: #2c3e50;
-  /* margin-top: 60px; */
+  height:calc(100% - 80px);
 }
 </style>
