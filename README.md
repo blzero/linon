@@ -1,5 +1,7 @@
 # linon
 
+https://kael-b.github.io/linon/#/components
+
 > A Vue.js project
 
 ## Build Setup
